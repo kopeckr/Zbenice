@@ -5,15 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
 
     <title>Zbenice</title>
   </head>
   <body>
+    <header>
+      <div class="header__dark-mode">
+        <label for="checkbox"></label>
+        <input type="checkbox" name="checkbox" id="checkbox" />
+        <img
+          class="header__dark-mode--icon"
+          src="img/day-sunny.svg"
+          alt="ikona pro světlý režim"
+        />
+        <img
+          class="header__dark-mode--icon"
+          src="img/moon-line.svg"
+          alt="ikona pro tmavý režim"
+        />
+      </div>
+
+      <div class="header__content">
+        <a href="#">
+          <img
+            class="header__logo"
+            src="img/Zbenice_Gold.png"
+            alt="logo zámku Zbenice"
+          />
+        </a>
+        <div class="header__details">
+          <a class="header__details--text" href="#">Zámek Zbenice</a>
+        </div>
+      </div>
+
+      <nav class="header__nav">
+        <button
+          class="header__hamburger--btn"
+          type="button"
+          aria-label="open menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="header__nav--list">
+          <li class="header__nav--item">
+            <a class="header__nav--link" href="#">Domů</a>
+          </li>
+          <li class="header__nav--item">
+            <a class="header__nav--link" href="#">O zámku</a>
+          </li>
+          <li class="header__nav--item">
+            <a class="header__nav--link" href="#">Fotogalerie</a>
+          </li>
+          <li class="header__nav--item">
+            <a class="header__nav--link" href="#">Kontakt</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
     <footer>
       <div class="footer__details">
         <img
@@ -23,8 +75,10 @@
         />
         <div class="footer__address">
           <p>
-            Adresa<br>
-            Zamek Zbenice<br> Zbenice 1<br> 262 31 Zbenice
+            Adresa<br />
+            Zamek Zbenice<br />
+            Zbenice 1<br />
+            262 31 Zbenice
           </p>
         </div>
         <div class="footer__contacts">
@@ -73,7 +127,7 @@
       <div class="footer__copyrights">
         <p class="footer__copyrights--text">
           Všechna práva vyhrazena. Žádná část tohoto webu, není-li uvedeno
-          jinak, v celku ani v části nesmí být kopírována nebo jinak
+          jinak, v&nbspcelku ani v části nesmí být kopírována nebo jinak
           reprodukována bez výslovné souhlasu provozovatele.
         </p>
         <a class="footer__copyrights--link" href="#"
