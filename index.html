@@ -9,20 +9,23 @@
     <title>Zbenice</title>
   </head>
   <body>
+    <a href="#main" class="skip-links">Přeskočit na obsah</a>
     <header>
       <div class="header__dark-mode">
-        <label for="checkbox"></label>
-        <input type="checkbox" name="checkbox" id="checkbox" />
+        <label class="dark-mode__switch" for="checkbox">
+          <input type="checkbox" name="checkbox" id="checkbox"/>
+          <div class="dark-mode__slider dark-mode__round"></div>
+        </label>
         <img
           class="header__dark-mode--icon"
           src="img/day-sunny.svg"
           alt="ikona pro světlý režim"
         />
-        <img
+        <!-- <img
           class="header__dark-mode--icon"
           src="img/moon-line.svg"
           alt="ikona pro tmavý režim"
-        />
+        /> -->
       </div>
 
       <div class="header__content">
@@ -39,16 +42,19 @@
       </div>
 
       <nav class="header__nav">
-        <button
-          class="header__hamburger--btn"
-          type="button"
-          aria-label="open menu"
-          aria-expanded="false"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+          <div class="header__hamburger-items">
+            <span class="header__hamburger-text">Menu</span>
+            <button
+            class="header__hamburger--btn"
+            type="button"
+            aria-label="open hamburger menu"
+            aria-expanded="false"
+            >
+            <span></span>
+            <span></span>
+            <span></span>
+            </button>
+          </div>
         <ul class="header__nav--list">
           <li class="header__nav--item">
             <a class="header__nav--link" href="#">Domů</a>
