@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Open+Sans:wght@400;700&family=Pinyon+Script&display=swap');
+
 :root {
   --gold: #ad9d7e; /* barva loga + pozadi na fotkach, cary na timeline*/
   --darkblue: #0b1734; /* barva paticky, hlavicky, buttonu, kulicek na timeline*/
@@ -10,6 +12,10 @@
   /*form validation */
   --darkred: #be5944;
 }
+
+/* font-family: 'EB Garamond', serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Pinyon Script', cursive; */
 
 html {
   font-family: 'Open Sans', sans-serif;
@@ -29,6 +35,131 @@ ul {
 a {
   text-decoration: none;
   color: var(--white);
+}
+
+/* header mobile version */
+header {
+  background-color: var(--darkblue);
+  color: var(--white);
+}
+
+.header__logo {
+  display: block;
+  width: min(50vw, 12.5rem);
+}
+
+.header__dark-mode--icon {
+  width: 1.5rem;
+}
+
+.header__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.25rem;
+}
+
+.header__details {
+  position: relative;
+}
+
+.header__details::before {
+  content: '';
+  position: absolute;
+  top: 16px;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background-color: var(--gold);
+}
+
+.header__details::after {
+  content: '';
+  position: absolute;
+  top: 16px;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background-color: var(--gold);
+}
+
+.header__details--text {
+  text-transform: uppercase;
+  font-family: 'EB Garamond', serif;
+  font-size: 1.5rem;
+  display: block;
+  text-align: center;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+}
+
+.header__nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--white);
+  padding: 1.25rem;
+}
+
+.header__hamburger--btn {
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 2rem;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.header__hamburger--btn span {
+  position: absolute;
+  top: calc(50% - 2px);
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: var(--darkblue);
+  transition-property: opacity, transform;
+  transition-duration: 0.2s;
+}
+.header__hamburger--btn span:nth-child(1) {
+  transform: translateY(-250%);
+}
+.header__hamburger--btn span:nth-child(3) {
+  transform: translateY(250%);
+}
+.header__hamburger--btn--opened span:nth-child(2) {
+  opacity: 0;
+}
+.header__hamburger--btn--opened span:nth-child(1) {
+  transform: rotate(45deg);
+}
+.header__hamburger--btn--opened span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+.header__nav--list {
+  text-transform: uppercase;
+  font-family: 'EB Garamond', serif;
+  padding-top: 2.5rem;
+}
+
+.header__nav--item {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.header__nav--link {
+  color: var(--darkblue);
+  display: block;
+  padding: 1rem;
+}
+
+.header__nav--link:hover {
+  color: var(--white);
+  background-color: var(--darkblue);
+  cursor: pointer;
+  transition: background-color ease-in-out 250ms;
 }
 
 /* footer mobile version */
